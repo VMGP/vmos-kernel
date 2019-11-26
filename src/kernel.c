@@ -33,10 +33,11 @@ kmain()
 	newline();
 	print("Example: osver - osve ");
 	newline();
+	
 	do {
 		if (kapp == 0){
 			print("\nVMOS> ");
-			cmdline = readStr();
+			cmdline = strtok(readStr()," ");
 			newline();
 			if(strEql(cmdline, "osver"))
 			{
@@ -49,22 +50,7 @@ kmain()
 				printch((char)176);
 				newline();
 			}
-			else if(strEql(cmdline, "osver "))
-			{
-				printch((char)176);
-				printch((char)177);
-				printch((char)178);
-				print(" VMOS 1.0.0 ");
-				printch((char)178);
-				printch((char)177);
-				printch((char)176);
-				newline();
-			}
 			else if(strEql(cmdline, "cls"))
-			{
-				clearScreen();
-			}
-			else if(strEql(cmdline, "cls "))
 			{
 				clearScreen();
 			}
@@ -72,15 +58,7 @@ kmain()
 			{
 				reboot();
 			}
-			else if(strEql(cmdline, "reboot "))
-			{
-				reboot();
-			}
 			else if(strEql(cmdline, "lastcmd"))
-			{
-				print(cmdline);
-			}
-			else if(strEql(cmdline, "lastcmd "))
 			{
 				print(cmdline);
 			}
@@ -88,15 +66,7 @@ kmain()
 			{
 				test = 5/0;
 			}
-			else if(strEql(cmdline, "crash "))
-			{
-				test = 5/0;
-			}
 			else if(strEql(cmdline, "debug"))
-			{
-				ss_serial();
-			}
-			else if(strEql(cmdline, "debug "))
 			{
 				ss_serial();
 			}
