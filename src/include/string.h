@@ -2,7 +2,11 @@
 #define STRING_H
 
 #include "types.h"
+<<<<<<< HEAD
 char *strtok(char *, const char *);
+=======
+char *strtok(char *, char *);
+>>>>>>> 7f1fed1c152195708f5e97cb8a73d9f8396b768f
 
 uint16 strlength(string ch)
 {
